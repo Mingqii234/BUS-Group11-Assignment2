@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GreenCampus Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>GreenCampus Energy Dashboard</h1>
+    <p>The latest energy usage data has been simulated and exported.</p>
+    <a href="/static/energy_report.csv" download>Download Energy CSV</a>
+
+    <h2>Building Energy Summary</h2>
+    <ul>
+        {% for b in buildings %}
+        <li>{{ b.id }} — Total: {{ b.get_total_energy()|round(2) }} kWh</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
