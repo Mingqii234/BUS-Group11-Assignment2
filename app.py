@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-from energy_system import EnergySystem
+from models.energy_system import EnergySystem
 import os
 
 app = Flask(__name__)

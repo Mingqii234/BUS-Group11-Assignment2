@@ -1,4 +1,4 @@
-from energy_system import EnergySystem
+from models.energy_system import EnergySystem
 import os
 
 if not os.path.exists("output"):
