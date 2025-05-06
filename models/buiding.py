@@ -17,7 +17,17 @@ class Building:
         return {d.name: d.get_total_energy() for d in self.devices}
 
 
+class Dormitory(Building):
+    def __init__(self, building_id):
+        super().__init__(building_id)
 
+class Laboratory(Building):
+    def __init__(self, building_id):
+        super().__init__(building_id)
+
+class Classroom(Building):
+    def __init__(self, building_id):
+        super().__init__(building_id)
 
 #
 class Dormitory(Building):
