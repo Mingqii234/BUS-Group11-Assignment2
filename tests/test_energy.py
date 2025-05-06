@@ -1,5 +1,6 @@
 import unittest
-from models.energy_system import Device, EnergySystem
+from models.building import Device
+from models.energy_system import EnergySystem
 from datetime import datetime, timedelta
 import os
 import pandas as pd
@@ -9,18 +10,18 @@ class TestEnergySystem(unittest.TestCase):
 
     def test_add_usage_positive(self):
         d = Device("AC", "B001")
-        d.add_usage(datetime.now().date(), 3.5)
+        d.add_usage(datetime.now(), 3.5)
         self.assertEqual(len(d.usage_log), 1)
 
     def test_add_usage_negative(self):
         d = Device("Heater", "B001")
-        d.add_usage(datetime.now().date(), -5)
-        self.assertLess(d.get_total_energy(), 0)
+        with self.assertRaises(ValueError):
+            d.add_usage(datetime.now(), -5)
 
     def test_total_energy_positive(self):
         d = Device("Light", "B001")
-        d.add_usage(datetime.now().date(), 2.0)
-        d.add_usage(datetime.now().date(), 3.0)
+        d.add_usage(datetime.now(), 2.0)
+        d.add_usage(datetime.now(), 3.0)
         self.assertEqual(d.get_total_energy(), 5.0)
 
     def test_total_energy_negative(self):
@@ -31,14 +32,14 @@ class TestEnergySystem(unittest.TestCase):
         sys = EnergySystem()
         sys.simulate_data()
         d = sys.buildings[0].devices[0]
-        today = datetime.now().date()
+        today = datetime.now()
         d.usage_log = [(today - timedelta(days=i), 4.6) for i in range(3)]
         self.assertGreaterEqual(d.get_recent_high_usage_days(), 3)
 
     def test_alert_detection_negative(self):
         d = Device("AC", "B001")
         for i in range(3):
-            d.add_usage(datetime.now().date() - timedelta(days=i), 2.0)
+            d.add_usage(datetime.now() - timedelta(days=i), 2.0)
         self.assertEqual(d.get_recent_high_usage_days(), 0)
 
     def test_export_csv_positive(self):
