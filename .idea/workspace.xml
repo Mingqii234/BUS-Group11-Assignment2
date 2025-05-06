@@ -1,8 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b806b245-831a-467b-bf7b-775879faadd5" name="更改" comment="feat: Add datetime to energy system&#10;feat: Add real-time energy consumption query&#10;feat: Add Dormitory, Laboratory, and Classroom subclasses for buildings">
+      <change afterPath="$PROJECT_DIR$/.idea/BUS-Group11-Assignment2-merged.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/GreenCampus.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/GreenCampus.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "xyz456456"
   }
-}</component>
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Mingqii234/BUS-Group11-Assignment2",
+    "accountId": "e60dc92d-bd65-43d7-91ba-b870cb2d0f4c"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 0
+}]]></component>
+  <component name="ProjectId" id="2whuYaLssLJfpNvreFqhz7WzOY3" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.app.executor": "Run",
+    "Python.energy.executor": "Run",
+    "Python.energy_service.executor": "Run",
+    "Python.energy_system.executor": "Run",
+    "Python.main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "feature/FR01b__energy",
+    "settings.editor.selected.configurable": "advanced.settings"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-abccbe9d933a-ba05f1cad1b1-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.20224.428" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="b806b245-831a-467b-bf7b-775879faadd5" name="更改" comment="" />
+      <created>1746506190156</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1746506190156</updated>
+    </task>
+    <task id="LOCAL-00001" summary="feat: Add datetime to energy system">
+      <option name="closed" value="true" />
+      <created>1746515456192</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1746515456192</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat: Add datetime to energy system&#10;feat: add real-time energy consumption query">
+      <option name="closed" value="true" />
+      <created>1746517454635</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1746517454636</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat: Add datetime to energy system&#10;feat: Add real-time energy consumption query&#10;feat: Add Dormitory, Laboratory, and Classroom subclasses for buildings">
+      <option name="closed" value="true" />
+      <created>1746519816228</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1746519816228</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: Add datetime to energy system" />
+    <MESSAGE value="feat: Add datetime to energy system&#10;feat: add real-time energy consumption query" />
+    <MESSAGE value="feat: Add datetime to energy system&#10;feat: Add real-time energy consumption query&#10;feat: Add Dormitory, Laboratory, and Classroom subclasses for buildings" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Add datetime to energy system&#10;feat: Add real-time energy consumption query&#10;feat: Add Dormitory, Laboratory, and Classroom subclasses for buildings" />
+  </component>
 </project>
