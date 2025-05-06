@@ -2,31 +2,6 @@ import random
 from datetime import datetime, timedelta
 import pandas as pd
 
-
-class Device:
-    def __init__(self, name, building_id):
-        self.name = name
-        self.building_id = building_id
-        self.usage_log = []
-
-    def add_usage(self, timestamp, energy):
-        self.usage_log.append((timestamp, energy))
-
-    def get_total_energy(self):
-        return sum(e for _, e in self.usage_log)
-
-    def get_recent_high_usage_days(self, threshold=4.5, days=3):
-        count = 0
-        for timestamp, energy in sorted(self.usage_log)[-days:]:
-            if energy > threshold:
-                count += 1
-        return count
-
-    def get_usage_by_day(self):
-        return sorted(self.usage_log)
-
-
-
 class EnergySystem:
     def __init__(self, building_ids=None, device_types=None):
         self.building_ids = building_ids or ["B001", "B002"]

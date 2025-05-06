@@ -31,7 +31,6 @@ class Device:
     def __repr__(self):
         return f"<Device name={self.name} building={self.building_id} usage_entries={len(self.usage_log)}>"
 
-
 class Building:
     def __init__(self, building_id):
         self.id = building_id
