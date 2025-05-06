@@ -1,6 +1,7 @@
 import random
 from datetime import datetime, timedelta
 import pandas as pd
+from models.building import Building, Device, Dormitory, Laboratory, Classroom
 
 class EnergySystem:
     def __init__(self, building_ids=None, device_types=None):
