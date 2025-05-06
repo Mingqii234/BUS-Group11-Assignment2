@@ -1,0 +1,126 @@
+[33mcommit 669e3e20c23873cb4aa65239a237a993e14ac268[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mfeature/FR01b_energy[m[33m)[m
+Author: Weitong Sun <wxs356@student.bham.ac.uk>
+Date:   Tue May 6 09:31:34 2025 +0100
+
+    fix: commit local changes before pulling
+
+[33mcommit ce27f79852cbc2e0b4ec6d0d97f33ec45b48249e[m
+Author: Weitong Sun <wxs356@student.bham.ac.uk>
+Date:   Tue May 6 09:23:01 2025 +0100
+
+    feat: Add datetime to energy system
+    feat: Add real-time energy consumption query
+    feat: Add Dormitory, Laboratory, and Classroom subclasses for buildings
+
+[33mcommit 12cb5b33dc5348bdc6bc7a26a4ea477075d69d63[m
+Author: Weitong Sun <wxs356@student.bham.ac.uk>
+Date:   Tue May 6 08:44:06 2025 +0100
+
+    feat: Add datetime to energy system
+    feat: add real-time energy consumption query
+
+[33mcommit ddf2fd1fec9d3dacfe76da7072b0e379c73dfbb5[m
+Author: Weitong Sun <wxs356@student.bham.ac.uk>
+Date:   Tue May 6 08:10:54 2025 +0100
+
+    feat: Add datetime to energy system
+
+[33mcommit a3808019d76fc52c31ada458f06f80356e517b27[m[33m ([m[1;31morigin/feature/FR01b_energy[m[33m)[m
+Author: Yanwen Wang <yanwen387@gmail.com>
+Date:   Mon May 5 18:19:55 2025 +0100
+
+    Remove chart module and references in main.py
+
+[33mcommit 171428e966129a9d2c71d4d2082c59e21137a0fe[m
+Merge: c72a296 afd1b3a
+Author: Yanwen Wang <yanwen387@gmail.com>
+Date:   Mon May 5 17:17:28 2025 +0100
+
+    Merge remote-tracking branch 'origin/FR01' into feature/FR01b_energy
+
+[33mcommit afd1b3a5eaa4f79cd650f90c269dabf3938a9507[m[33m ([m[1;31morigin/feature/FR01a_energy[m[33m, [m[1;31morigin/FR01[m[33m)[m
+Author: Weitong Sun <wxs356@student.bham.ac.uk>
+Date:   Sun May 4 17:07:40 2025 +0100
+
+    test: add negative test case for get_daily_building_consumption when no data is found
+
+[33mcommit c72a296b435fd99d63e1ec9d646f637b3bc493fa[m
+Author: Yanwen Wang <yanwen387@gmail.com>
+Date:   Sun May 4 11:14:55 2025 +0100
+
+    FR01b system: simulation, plotting, CSV export, web dashboard, and tests
+
+[33mcommit b3a2b388174b2d14bd53f14077a28eef8558d620[m
+Merge: ef00527 8a8dc2b
+Author: Yanwen Wang <yanwen387@gmail.com>
+Date:   Sun May 4 11:04:32 2025 +0100
+
+    Merge branch 'feature/FR01b_energy' of https://github.com/Mingqii234/BUS-Group11-Assignment2 into feature/FR01b_energy
+
+[33mcommit ef005274c8dfcb5f854a4dc29e38f95af97f6bec[m
+Author: Yanwen Wang <yanwen387@gmail.com>
+Date:   Sat May 3 22:39:06 2025 +0100
+
+    Revert "test commit to check identity info"
+    
+    This reverts commit 8a8dc2b021a89af92574c5b430cf130188a6a34a.
+
+[33mcommit a99631e8c3c724c83636699a1c04d383c97f0b67[m
+Author: Yanwen Wang <yanwen387@gmail.com>
+Date:   Sat May 3 22:34:15 2025 +0100
+
+    test commit to check identity info
+
+[33mcommit 8a8dc2b021a89af92574c5b430cf130188a6a34a[m
+Author: Yanwen Wang <yanwen387@gmail.com>
+Date:   Sat May 3 22:34:15 2025 +0100
+
+    test commit to check identity info
+
+[33mcommit d0b7fb48564629c389fa8594516f4e6e36800c64[m
+Author: chili7fosea@gmail.com <yanwen387@gmail.com>
+Date:   Sat May 3 22:01:35 2025 +0100
+
+    Create workspace.xml
+
+[33mcommit bb8b231eddb9d5611d0b70aa10b5ba43551dded3[m
+Author: Weitong Sun <wxs356@student.bham.ac.uk>
+Date:   Fri May 2 04:59:22 2025 +0100
+
+    test: add positive test for get_daily_consumption() to verify correct energy consumption retrieval
+
+[33mcommit d74511159941d607944e0c1ffcbd9b76a17a994c[m
+Author: Weitong Sun <wxs356@student.bham.ac.uk>
+Date:   Fri May 2 04:34:46 2025 +0100
+
+    chore: add demo.py to demonstrate daily building energy consumption query
+
+[33mcommit cc2523ecda24ff9beb8690c74f59f74989c84b85[m
+Author: Weitong Sun <wxs356@student.bham.ac.uk>
+Date:   Fri May 2 04:23:08 2025 +0100
+
+    feat: implement load_energy_data() to load data from CSV and get_daily_consumption() to query daily building energy consumption
+
+[33mcommit 24ea61c54fa8b14650b34c10160d4fcd6841c564[m
+Author: Weitong Sun <wxs356@student.bham.ac.uk>
+Date:   Thu May 1 17:39:07 2025 +0100
+
+    feat: add mock energy dataset energy_data.csv with 10 test records
+
+[33mcommit f989cfede1388c971a28716a137a48d6dbbff004[m
+Author: Weitong Sun <wxs356@student.bham.ac.uk>
+Date:   Thu May 1 17:20:40 2025 +0100
+
+    feat: Create EnergyConsumption class with building_id, date, and consumption_kwh attributes
+
+[33mcommit 886d43eb1400635b5844dd590659a1523094fb56[m
+Author: Weitong Sun <wxs356@student.bham.ac.uk>
+Date:   Thu May 1 04:24:27 2025 +0100
+
+    Initialize GreenCampus project
+
+[33mcommit 08d846eebb7407e9d54ce4275a39df57943f0efa[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Mingqi Pan <155300633+Mingqii234@users.noreply.github.com>
+Date:   Thu Apr 24 00:54:27 2025 +0800
+
+    Initial commit
