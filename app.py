@@ -4,19 +4,19 @@ import os
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route("/")
 def index():
+    if not os.path.exists("output"):
+        os.makedirs("output")
+
     system = EnergySystem(
-        building_ids=["Library", "DormA", "Engineering"],
+        building_ids=["Dormitory", "Laboratory", "Classroom"],
         device_types=["AC", "Light", "Computer", "Heater"]
     )
     system.simulate_data(num_days=10)
-
-    if not os.path.exists("static"):
-        os.makedirs("static")
     system.export_to_csv("static/energy_report.csv")
 
-    return render_template("dashboard.html", buildings=system.buildings)
+    return render_template("dashboard.html")
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     app.run(debug=True)
