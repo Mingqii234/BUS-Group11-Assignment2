@@ -3,17 +3,28 @@ from datetime import datetime, timedelta
 import pandas as pd
 
 
-class Dormitory(Building):
-    def __init__(self, building_id):
-        super().__init__(building_id)
+class Device:
+    def __init__(self, name, building_id):
+        self.name = name
+        self.building_id = building_id
+        self.usage_log = []
 
-class Laboratory(Building):
-    def __init__(self, building_id):
-        super().__init__(building_id)
+    def add_usage(self, timestamp, energy):
+        self.usage_log.append((timestamp, energy))
 
-class Classroom(Building):
-    def __init__(self, building_id):
-        super().__init__(building_id)
+    def get_total_energy(self):
+        return sum(e for _, e in self.usage_log)
+
+    def get_recent_high_usage_days(self, threshold=4.5, days=3):
+        count = 0
+        for timestamp, energy in sorted(self.usage_log)[-days:]:
+            if energy > threshold:
+                count += 1
+        return count
+
+    def get_usage_by_day(self):
+        return sorted(self.usage_log)
+
 
 
 class EnergySystem:
