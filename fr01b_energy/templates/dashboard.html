@@ -17,5 +17,24 @@
         </li>
         {% endfor %}
     </ul>
+
+    <h2>Query Real-Time Energy Consumption for a Specific Date</h2>
+    <form method="POST">
+        <label for="selected_date">Select Date:</label>
+        <input type="date" id="selected_date" name="selected_date" required placeholder="yyyy-mm-dd">
+        <button type="submit">Query</button>
+    </form>
+
+    {% if selected_date %}
+    <h3>Selected Date: {{ selected_date }}</h3>
+    <h4>Energy Consumption on {{ selected_date }}:</h4>
+    <ul>
+        {% for b in energy_on_date %}
+        <li>{{ b.id }}: {{ b.energy|round(2) }} kWh</li>
+        {% endfor %}
+    </ul>
+    {% elif selected_date is not none %}
+    <p style="color: red;">Please select a valid date.</p>
+    {% endif %}
 </body>
 </html>

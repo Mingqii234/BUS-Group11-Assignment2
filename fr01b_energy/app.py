@@ -1,10 +1,11 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from energy_system import EnergySystem
 import os
+from datetime import datetime
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def index():
     system = EnergySystem(
         building_ids=["Library", "DormA", "Engineering"],
@@ -16,7 +17,6 @@ def index():
         os.makedirs("static")
     system.export_to_csv("static/energy_report.csv")
 
-    # 准备模板数据（将datetime对象格式化为字符串方便显示）
     buildings_data = []
     for building in system.buildings:
         latest_timestamp = None
@@ -31,7 +31,26 @@ def index():
             "total_energy": building.get_total_energy()
         })
 
-    return render_template("dashboard.html", buildings=buildings_data)
+    selected_date = None
+    energy_on_date = None
+
+    if request.method == 'POST':
+        selected_date_str = request.form.get('selected_date')
+        if selected_date_str:
+            selected_date = datetime.strptime(selected_date_str, "%Y-%m-%d").date()
+            energy_on_date = []
+            for building in system.buildings:
+                building_data = {
+                    "id": building.id,
+                    "energy": 0
+                }
+                for device in building.devices:
+                    for timestamp, energy in device.get_usage_by_day():
+                        if timestamp.date() == selected_date:
+                            building_data["energy"] += energy
+                energy_on_date.append(building_data)
+
+    return render_template("dashboard.html", buildings=buildings_data, selected_date=selected_date, energy_on_date=energy_on_date)
     
 
 if __name__ == '__main__':

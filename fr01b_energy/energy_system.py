@@ -65,7 +65,6 @@ class EnergySystem:
                     random_second = random.randint(0, 59)
                     current_datetime = datetime.combine(current_date, datetime.min.time()).replace(hour=random_hour, minute=random_minute, second=random_second)
 
-                    #date = datetime.now().date() - timedelta(days=i)
                     energy = round(random.uniform(0.5, 5.5), 2)
                     dev.add_usage(current_datetime, energy)
                 building.add_device(dev)
