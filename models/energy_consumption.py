@@ -1,3 +1,4 @@
+
 class EnergyConsumption:
     def __init__(self, building_id: int, date: str, consumption_kwh: float):
         self.building_id = building_id

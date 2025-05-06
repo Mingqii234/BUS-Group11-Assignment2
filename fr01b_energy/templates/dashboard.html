@@ -10,10 +10,11 @@
     <p>The latest energy usage data has been simulated and exported.</p>
     <a href="/static/energy_report.csv" download>Download Energy CSV</a>
 
-    <h2>Building Energy Summary</h2>
+    <h2>Latest Building Energy Consumption</h2>
     <ul>
         {% for b in buildings %}
-        <li>{{ b.id }} — Total: {{ b.get_total_energy()|round(2) }} kWh</li>
+        <li>{{ b.id }} — {{ b.first_timestamp }} Total: {{ b.total_energy|round(2) }} kWh
+        </li>
         {% endfor %}
     </ul>
 </body>

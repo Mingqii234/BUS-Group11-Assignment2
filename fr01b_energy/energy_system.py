@@ -50,15 +50,24 @@ class EnergySystem:
         self.device_types = device_types or ["AC", "Heater", "Light", "Computer"]
         self.buildings = []
 
-    def simulate_data(self, num_days=7):
+    def simulate_data(self, num_days=7, start_date=None, hour_range=(8, 18)):
+        start_date = start_date or datetime.now()
+        start_date = start_date.replace(minute=0, second=0, microsecond=0)
+
         for bid in self.building_ids:
             building = Building(bid)
             for dname in self.device_types:
                 dev = Device(dname, bid)
-                for i in range(num_days):
-                    date = datetime.now().date() - timedelta(days=i)
+                for day_offset in range(num_days):
+                    current_date = (start_date - timedelta(days=day_offset)).date()
+                    random_hour = random.randint(hour_range[0], hour_range[1])
+                    random_minute = random.randint(0, 59)
+                    random_second = random.randint(0, 59)
+                    current_datetime = datetime.combine(current_date, datetime.min.time()).replace(hour=random_hour, minute=random_minute, second=random_second)
+
+                    #date = datetime.now().date() - timedelta(days=i)
                     energy = round(random.uniform(0.5, 5.5), 2)
-                    dev.add_usage(date, energy)
+                    dev.add_usage(current_datetime, energy)
                 building.add_device(dev)
             self.buildings.append(building)
 
@@ -70,10 +79,10 @@ class EnergySystem:
                     records.append({
                         "Building_ID": b.id,
                         "Device": d.name,
-                        "Date": ts,
+                        "Datetime": ts.strftime("%Y-%m-%d %H:%M:%S"),
                         "Energy(kWh)": en
                     })
-        df = pd.DataFrame(records)
+        df = pd.DataFrame(records, columns=["Building_ID", "Device", "Datetime", "Energy(kWh)"])
         if df.empty:
-            df = pd.DataFrame(columns=["Building_ID", "Device", "Date", "Energy(kWh)"])
+            df = pd.DataFrame(columns=["Building_ID", "Device", "Datetime", "Energy(kWh)"])
         df.to_csv(filename, index=False)

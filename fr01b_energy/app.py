@@ -16,7 +16,23 @@ def index():
         os.makedirs("static")
     system.export_to_csv("static/energy_report.csv")
 
-    return render_template("dashboard.html", buildings=system.buildings)
+    # 准备模板数据（将datetime对象格式化为字符串方便显示）
+    buildings_data = []
+    for building in system.buildings:
+        latest_timestamp = None
+        for device in building.devices:
+            usage = device.get_usage_by_day()
+            for timestamp, _ in usage:
+                if latest_timestamp is None or timestamp > latest_timestamp:
+                    latest_timestamp = timestamp
+        buildings_data.append({
+            "id": building.id,
+            "first_timestamp": latest_timestamp.strftime("%Y-%m-%d %H:%M:%S") if latest_timestamp else "N/A",
+            "total_energy": building.get_total_energy()
+        })
+
+    return render_template("dashboard.html", buildings=buildings_data)
+    
 
 if __name__ == '__main__':
     app.run(debug=True)
