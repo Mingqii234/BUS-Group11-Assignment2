@@ -1,5 +1,5 @@
 import unittest
-from energy_system import Device, Building, EnergySystem
+from models.energy_system import Device, EnergySystem
 from datetime import datetime, timedelta
 import os
 import pandas as pd
