@@ -8,7 +8,7 @@ app = Flask(__name__)
 @app.route('/', methods=['GET', 'POST'])
 def index():
     system = EnergySystem(
-        building_ids=["Library", "DormA", "Engineering"],
+        building_ids=["Library", "DormA", "DormB", "Engineering", "Lab1", "Lab2", "Classroom1", "Classroom2"],
         device_types=["AC", "Light", "Computer", "Heater"]
     )
     system.simulate_data(num_days=10)

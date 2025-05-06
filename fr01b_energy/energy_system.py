@@ -43,6 +43,18 @@ class Building:
     def device_energy_breakdown(self):
         return {d.name: d.get_total_energy() for d in self.devices}
 
+class Dormitory(Building):
+    def __init__(self, building_id):
+        super().__init__(building_id)
+
+class Laboratory(Building):
+    def __init__(self, building_id):
+        super().__init__(building_id)
+
+class Classroom(Building):
+    def __init__(self, building_id):
+        super().__init__(building_id)
+
 
 class EnergySystem:
     def __init__(self, building_ids=None, device_types=None):
@@ -55,7 +67,15 @@ class EnergySystem:
         start_date = start_date.replace(minute=0, second=0, microsecond=0)
 
         for bid in self.building_ids:
-            building = Building(bid)
+            if "Dorm" in bid:
+                building = Dormitory(bid)
+            elif "Lab" in bid or "Laboratory" in bid:
+                building = Laboratory(bid)
+            elif "Classroom" in bid:
+                building = Classroom(bid)
+            else:
+                building = Building(bid)
+
             for dname in self.device_types:
                 dev = Device(dname, bid)
                 for day_offset in range(num_days):
