@@ -26,23 +26,6 @@ class Device:
         return sorted(self.usage_log)
 
 
-class Building:
-    def __init__(self, building_id):
-        self.id = building_id
-        self.devices = []
-
-    def add_device(self, device):
-        self.devices.append(device)
-
-    def get_total_energy(self):
-        return sum(d.get_total_energy() for d in self.devices)
-
-    def get_devices(self):
-        return self.devices
-
-    def device_energy_breakdown(self):
-        return {d.name: d.get_total_energy() for d in self.devices}
-
 class Dormitory(Building):
     def __init__(self, building_id):
         super().__init__(building_id)
