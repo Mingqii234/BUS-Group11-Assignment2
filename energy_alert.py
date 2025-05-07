@@ -38,6 +38,14 @@ class EnergyAlertSystem(Observer):
         if not isinstance(subject, RoomStatus):
             return
         if not subject.is_occupied and (subject.light_on or subject.ac_on):
-            print(f" Alert: {subject.room_name} is empty but light/AC is ON!")
+            reason = []
+            if subject.light_on:
+                reason.append("light is ON")
+            if subject.ac_on:
+                reason.append("AC is ON")
+            detail = " and ".join(reason)
+            print(f" Alert: {subject.room_name} is empty but {detail}!")
+
+
 
 
