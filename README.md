@@ -15,6 +15,34 @@ The system is built with a modular structure, separating data generation, visual
 
 ## 2. Step-by-Step Execution
 
+### FR01 Real-Time Energy Monitoring
+**Files:** `app.py`, `models/building.py`, `models/energy_system.py`, `templates/dashboard.html`, `static/style.css`
+
+**Set up Environment**
+
+**Step 1:** Initialize Energy System  
+The `EnergySystem` class manages multiple buildings and devices. It simulates real-time energy data using randomized timestamps and energy values.
+Ensure Python 3.8 or later is installed.
+
+**Step 2:** Data Export  
+Energy data is exported to a CSV file (`static/energy_report.csv`), which includes the building ID, device name, timestamp, and energy consumption.
+(Recommended) Create a virtual environment:
+
+**Step 3:** Web Dashboard  
+The `app.py` provides a Flask-based web dashboard, allowing users to view total energy usage and query historical data by date.
+```bash
+python -m venv venv
+source venv/bin/activate    # Mac/Linux
+venv\Scripts\activate       # Windows
+```
+
+**Step 4:** Run the Application  
+Execute `app.py` to launch the dashboard. Access the web interface by opening `http://localhost:<port>/` in your web browser. 
+
+**Install Dependencies**
+
+---
+
 ### FR02 Send Alert: Detecting Energy Waste in Empty Rooms  
 **Files:** `energy_alert.py`, `main.py`
 
@@ -58,13 +86,48 @@ This project includes unit tests for 3 core features, covering both **positive a
 
 - **Alert system:** Ensures alerts are triggered only when rooms are empty but lights or AC are on.
 - **Trend visualization:** Verifies correct generation of simulated energy data over different time periods.
+- **Energy System:** Validates correct data simulation, export functionality, and device energy tracking.
+#### [Real-Time Energy Monitoring and Data Export](./models/energy_system.py)
 
 **To run all tests**, use the following command in terminal:
 pytest tests/
 
 ---
+## 3. List of Programming Languages, Frameworks, and Tools Used  
+
+- **Programming Languages:**  
+  - Python 3.8+  
+
+- **Frameworks and Libraries:**  
+  - Flask (for web dashboard)  
+  - Matplotlib (for data visualization)  
+  - pytest (for testing)  
+
+- **Tools and Utilities:**  
+  - Virtualenv (for environment management)  
+  - CSV (for data export and import)  
+
+---
 
 ## 4. Summary of Implemented Functionalities
+
+### [Real-Time Energy Monitoring and Data Export](./models/energy_system.py)
+
+This module includes the main energy system logic, supporting the following key features:
+
+- **Building and Device Simulation**  
+  Each building contains multiple devices, each tracking energy consumption over time.
+- **Energy Data Simulation**  
+  Simulates energy usage data for multiple buildings and devices over a configurable time range.
+- **Data Export to CSV**  
+  Exports building-level energy data to a structured CSV file for further analysis.
+- **Factory Pattern for Building Creation**  
+  Utilizes a factory pattern for creating building instances (e.g., Dormitory, Laboratory, Classroom) based on building IDs.
+- **Data Query via Web Interface**  
+  Allows users to query historical energy consumption data through a web interface with date-based selection.
+
+#### [Web Interface for Data Query](./app.py)
+
 ###  [Energy Alert System](./energy_alert.py)
 The **Energy Alert** module monitors the real-time status of rooms to detect unnecessary energy consumption. It implements the following functionalities:
 - **Room Status Tracking**  
@@ -96,12 +159,36 @@ This module includes both the **energy data generation logic** (`energy_data.py`
 - **Customizable Axes and Labels**  
   The visualization includes proper axis labels, titles, and scaling for each period, enhancing readability and interpretability.
 
+### [Web Interface for Data Query](./app.py)
+
+This module provides a simple, interactive web interface for real-time data monitoring:
+
+- **Date-Based Query**  
+  Users can select a date to view the energy consumption of each building on that day.
+- **CSV Data Download**  
+  Provides a direct link to download the latest exported energy data file.
+
+#### [Other Components](./models/building.py)
+- **Building and Device Classes**  
+  Includes a flexible building hierarchy with specialized building types (Dormitory, Laboratory, Classroom).
+- **Factory Design Pattern**  
+  Uses a factory pattern for building instance creation, improving code organization and scalability.
+
+#### [Testing](./tests/)
+- **Positive and Negative Test Cases**  
+  Covers key functionalities such as data export, energy simulation, and device energy tracking.
+- **Automated Test Execution**  
+  Allows for easy test execution using the `unittest` module.
+
+
 
 ###  [Other Components](./main.py)
 
 #### `main.py` – System Orchestration and Demonstration
 
 The `main.py` file serves as the central controller that integrates and demonstrates the core functionalities of the system:
+
+
 
 - Initializes example `RoomStatus` objects and runs the alert system via `scan_and_alert()`.  
 - Generates energy usage data for daily, weekly, and monthly periods.  
