@@ -11,6 +11,59 @@ In addition, the system includes a simple alert mechanism that detects when room
 
 The system is built with a modular structure, separating data generation, visualization, and alert logic into different components. This makes the project easier to maintain, test, and expand in the future.
 
+---
+
+## Step-by-Step Execution
+
+### FR02 Send Alert: Detecting Energy Waste in Empty Rooms  
+**Files:** `energy_alert.py`, `main.py`
+
+**Step 1:** Initialize Room Data  
+In `main.py`, a list of `RoomStatus` objects is created, each representing a room with randomly assigned `occupied`, `light_on`, and `ac_on` states.
+
+**Step 2:** Define Alert Logic  
+The alert behavior is implemented in `energy_alert.py` using the **Observer Design Pattern**:
+- `RoomStatus` is the **Subject**  
+- `EnergyAlertSystem` is the **Observer**  
+When the room status changes, the observer is notified and may issue alerts.
+
+**Step 3:** Run Alert System  
+Run `main.py` to trigger the alert system.
+
+**Step 4:** Observe Warnings  
+If a room is empty but has the light or AC on, an alert will be printed. Example output:
+Alert: Room A is empty but light is ON!
+
+---
+
+### FR06 Energy Usage Trend Visualization  
+**Files:** `main.py`, `energy_data.py`, `visualizer.py`
+
+**Step 1:** Enable the Visualization Block  
+In `main.py`, uncomment the visualization section to activate trend generation and plotting.
+
+**Step 2:** Generate Simulated Data  
+`DataGeneratorFactory` in `energy_data.py` simulates energy usage over daily, weekly, and monthly periods.
+
+**Step 3:** Plot and View Results  
+The function `plot_data_with_percent()` in `visualizer.py` displays bar charts with energy usage and percentage change compared to a baseline.
+
+**Step 4:** Run `main.py`  
+Execute `main.py` to view the simulated energy usage visualizations.
+
+---
+
+### Tests  
+This project includes unit tests for 3 core features, covering both **positive and negative scenarios**:
+
+- **Alert system:** Ensures alerts are triggered only when rooms are empty but lights or AC are on.
+- **Trend visualization:** Verifies correct generation of simulated energy data over different time periods.
+
+**To run all tests**, use the following command in terminal:
+pytest tests/
+
+---
+
 ## 4. Summary of Implemented Functionalities
 ###  [Energy Alert System](./energy_alert.py)
 The **Energy Alert** module monitors the real-time status of rooms to detect unnecessary energy consumption. It implements the following functionalities:
