@@ -205,7 +205,7 @@ The `main.py` file serves as the central controller that integrates and demonstr
 | Yu Zeng - 2810823 |       20%        |Implemented `main.py` for alert & trend features;<br>Add positive and negative test cases for trends in`test_energy_trends.py`;<br>Created step-by-step guide for alert & trend in README;<br>Demonstrated alert system in video|                   |Yu Zeng             |
 |      Weitong Sun             |                  |                                   |                   |           |
 |    Mingqi Pan - 2749735               |       20%           |Implemented `energy_data.py` and `visualizer.py` for data generation and trend visualization;<br>demonstrated the energy alert and visualization tests in the project video;<br>contributed the functionality summary section in the README.                                   |                   | Mingqi Pan |
-|                   |                  |                                   |                   |           |
+|  Yanwen Wang - 2847662 | 20%              | - Created and refactored `app.py` for Flask web server and data export <br>- Developed `building.py` for core building hierarchy and factory pattern <br>- Optimized FR01 directory structure <br>- Developed `style.css` for web dashboard styling <br> - Wrote README sections for FR01 setup and execution <br>- Managed branch merges and conflict resolution |                                   | Yanwen Wang                    |
 |                   |                  |                                   |                   |           |
 
 
