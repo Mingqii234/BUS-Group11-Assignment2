@@ -202,9 +202,9 @@ The `main.py` file serves as the central controller that integrates and demonstr
 
 | Student Name & ID | Contribution (%) | Key Contributions/Tasks Completed | Comments (if any) | Signature |
 |:-----------------|:----------------|:---------------------------------|:-----------------|:---------|
-| Yu Zeng - 2810823 |       20%        |Implemented `main.py` for alert & trend features<br>Add positive and negative test cases for trends in`test_energy_trends.py`<br>created step-by-step guide for alert & trend in README<br>Demonstrated alert system in video|                   |Yu Zeng             |
+| Yu Zeng - 2810823 |       20%        |Implemented `main.py` for alert & trend features;<br>Add positive and negative test cases for trends in`test_energy_trends.py`;<br>Created step-by-step guide for alert & trend in README;<br>Demonstrated alert system in video|                   |Yu Zeng             |
 |      Weitong Sun             |                  |                                   |                   |           |
-|    Mingqi Pan - 2749735               |                  |                                   |                   |           |
+|    Mingqi Pan - 2749735               |       20%           |Implemented `energy_data.py` and `visualizer.py` for data generation and trend visualization;<br>demonstrated the energy alert and visualization tests in the project video;<br>contributed the functionality summary section in the README.                                   |                   | Mingqi Pan |
 |                   |                  |                                   |                   |           |
 |                   |                  |                                   |                   |           |
 
