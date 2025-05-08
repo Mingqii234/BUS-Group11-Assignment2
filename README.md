@@ -13,7 +13,7 @@ The system is built with a modular structure, separating data generation, visual
 
 ---
 
-## Step-by-Step Execution
+## 2. Step-by-Step Execution
 
 ### FR02 Send Alert: Detecting Energy Waste in Empty Rooms  
 **Files:** `energy_alert.py`, `main.py`
