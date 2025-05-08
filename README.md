@@ -1,6 +1,16 @@
 # BUS-Group11-Assignment2
 BUS-Group11-Assignment2
 
+## 1. System Overview
+
+This system is developed to support energy monitoring and management in campus buildings such as dormitories, classrooms, and laboratories. It provides real-time tracking of energy use and visualizes daily, weekly, and monthly usage trends using numerical summaries and bar charts with percentage labels.
+
+These visual insights help users understand how energy is being used over time and spot unusual patterns more easily.
+
+In addition, the system includes a simple alert mechanism that detects when rooms are unoccupied but devices like lights or air conditioning are still on. The alert is displayed in the console, aiming to reduce unnecessary energy use and encourage more efficient behavior.
+
+The system is built with a modular structure, separating data generation, visualization, and alert logic into different components. This makes the project easier to maintain, test, and expand in the future.
+
 ## 4. Summary of Implemented Functionalities
 ###  [Energy Alert System](./energy_alert.py)
 The **Energy Alert** module monitors the real-time status of rooms to detect unnecessary energy consumption. It implements the following functionalities:
