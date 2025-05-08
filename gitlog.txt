@@ -1,0 +1,66 @@
+669a321,xyz456456,2025-05-08,Merge 010206 into main
+186a491,Mingqi Pan,2025-05-08,Update README.md
+8911ef4,limian319,2025-05-08,Update README.md
+e46a1f5,limian319,2025-05-08,Update README.md
+9f93af9,xyz456456,2025-05-08,Update README.md
+ea7282f,Yanwen Wang,2025-05-08,Update README for Contribution Percentage to the Project
+97e0230,Mingqi Pan,2025-05-08,Update README.md
+d8d1762,Mingqi Pan,2025-05-08,Update README.md
+ea1d71d,xyz456456,2025-05-08,Update README.md
+1001fde,YU065,2025-05-08,Update contribution in README.md
+13b253e,xyz456456,2025-05-08,Update README.md
+6075862,Yanwen Wang,2025-05-08,Update README for FR01 and General Improvements
+b375e44,YU065,2025-05-08,Add step-by-step guide for alert and trend visualization features in README.md
+ecae438,YU065,2025-05-08,dd step-by-step guide for alert and trend visualization features in README.md
+4090f69,limian319,2025-05-08,Update README.md
+37812ab,Mingqi Pan,2025-05-08,Update README with feature descriptions
+4cc3ed7,limian319,2025-05-08,Update test_energy_alert.py
+5e70e2d,limian319,2025-05-08,Update energy_alert.py
+c74e12c,Yanwen Wang,2025-05-06,Merge branch '01' into 010206
+c40731c,Yanwen Wang,2025-05-06,Merge branch 'lm' into 010206
+187de75,Yanwen Wang,2025-05-06,Merge branch 'yu' into 010206
+9eb2154,Yanwen Wang,2025-05-06,Update dashboard UI and style.css for FR01 display
+2ee6232,Weitong Sun,2025-05-06,Fix test_energy.py: use full datetime objects instead of date Fix download link in dashboard.html: point to correct static CSV path
+76f8b41,李勉,2025-05-06,test: add test_energy_alert.py under root tests/ folder
+45b1be0,limian319,2025-05-06,Delete energy_alert_trends directory
+b88cb43,李勉,2025-05-06,test: add test_energy_alert.py under energy_alert_trends/tests on lm branch
+695b40b,limian319,2025-05-06,Delete tests
+b9d87f6,limian319,2025-05-06,Create tests- energy_alert_test
+bcbeb65,李勉,2025-05-06,feat: add energy_alert.py on lm branch
+0250c9b,Mingqii234,2025-05-06,feat: add energy_data.py for data loading
+e73a5ca,Mingqii234,2025-05-06,feat: add visualizer.py for data visualization
+c19c6ac,YU065,2025-05-06,test: add test_energy_trends in tests folder on yu branch
+93304c5,YU065,2025-05-06,feat: upload main.py to yu branch
+ab245dd,Weitong Sun,2025-05-06,fix(energy_system): resolve circular import with models.building
+5863a9f,Yanwen Wang,2025-05-06,refactor: move Device class to building.py
+1f1dab3,Yanwen Wang,2025-05-06,Merge branch '01' of https://github.com/Mingqii234/BUS-Group11-Assignment2 into 01
+5733940,Yanwen Wang,2025-05-06,Merge remote-tracking branch 'origin/01' into 01
+582acef,Weitong Sun,2025-05-06,delete data.csv
+c821d72,Yanwen Wang,2025-05-06,refactor: move Device class to building.py
+0a156bf,Weitong Sun,2025-05-06,feat: Add datetime to energy system feat: Add real-time energy consumption query feat: Add Dormitory, Laboratory, and Classroom subclasses for buildings feat:Update build.py
+a5aa722,Yanwen Wang,2025-05-06,refactor: extract building-related classes to separate module
+7594d99,Yanwen Wang,2025-05-06,Merge branch 'feature/FR01b_energy' into 01
+c1238ae,Yanwen Wang,2025-05-06,feat: add building factory pattern and refactor EnergySystem
+ab490f5,Weitong Sun,2025-05-06,Save changes from feature/FR01b_energy to be pushed to feature/FR01a_energy
+ec64625,Weitong Sun,2025-05-06,Merge remote-tracking branch 'origin/feature/FR01b_energy' into feature/FR01b_energy
+669e3e2,Weitong Sun,2025-05-06,fix: commit local changes before pulling
+ce27f79,Weitong Sun,2025-05-06,feat: Add datetime to energy system feat: Add real-time energy consumption query feat: Add Dormitory, Laboratory, and Classroom subclasses for buildings
+12cb5b3,Weitong Sun,2025-05-06,feat: Add datetime to energy system feat: add real-time energy consumption query
+ddf2fd1,Weitong Sun,2025-05-06,feat: Add datetime to energy system
+52f3953,Yanwen Wang,2025-05-05,Refactor: Restructure project folders
+a380801,Yanwen Wang,2025-05-05,Remove chart module and references in main.py
+171428e,Yanwen Wang,2025-05-05,Merge remote-tracking branch 'origin/FR01' into feature/FR01b_energy
+afd1b3a,Weitong Sun,2025-05-04,test: add negative test case for get_daily_building_consumption when no data is found
+c72a296,Yanwen Wang,2025-05-04,FR01b system: simulation, plotting, CSV export, web dashboard, and tests
+b3a2b38,Yanwen Wang,2025-05-04,Merge branch 'feature/FR01b_energy' of https://github.com/Mingqii234/BUS-Group11-Assignment2 into feature/FR01b_energy
+ef00527,Yanwen Wang,2025-05-03,Revert "test commit to check identity info"
+a99631e,Yanwen Wang,2025-05-03,test commit to check identity info
+8a8dc2b,Yanwen Wang,2025-05-03,test commit to check identity info
+d0b7fb4,chili7fosea@gmail.com,2025-05-03,Create workspace.xml
+bb8b231,Weitong Sun,2025-05-02,test: add positive test for get_daily_consumption() to verify correct energy consumption retrieval
+d745111,Weitong Sun,2025-05-02,chore: add demo.py to demonstrate daily building energy consumption query
+cc2523e,Weitong Sun,2025-05-02,feat: implement load_energy_data() to load data from CSV and get_daily_consumption() to query daily building energy consumption
+24ea61c,Weitong Sun,2025-05-01,feat: add mock energy dataset energy_data.csv with 10 test records
+f989cfe,Weitong Sun,2025-05-01,feat: Create EnergyConsumption class with building_id, date, and consumption_kwh attributes
+886d43e,Weitong Sun,2025-05-01,Initialize GreenCampus project
+08d846e,Mingqi Pan,2025-04-24,Initial commit
