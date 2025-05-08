@@ -196,5 +196,17 @@ The `main.py` file serves as the central controller that integrates and demonstr
 - Coordinates execution flow, providing a simple unified entry point for users.
 
 
+---
+
+## 5. Contribution Percentage to the Project
+
+| Student Name & ID | Contribution (%) | Key Contributions/Tasks Completed | Comments (if any) | Signature |
+|:-----------------:|:----------------:|:---------------------------------:|:-----------------:|:---------:|
+|                   |                  |                                   |                   |           |
+|                   |                  |                                   |                   |           |
+|                   |                  |                                   |                   |           |
+|                   |                  |                                   |                   |           |
+|                   |                  |                                   |                   |           |
+
 
   
